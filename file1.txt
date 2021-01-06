@@ -1,0 +1,42 @@
+(base) sg@Shubham:~$ cd Desktop/
+(base) sg@Shubham:~/Desktop$ cd SPE/Lab1/
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git init
+Initialized empty Git repository in /home/sg/Desktop/SPE/Lab1/.git/
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ touch file1.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git add file1.txt 
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git commit -m "File1 has been added" 
+[master (root-commit) 56586c5] File1 has been added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git log
+commit 56586c534371ef686005a7dc2c2bf3009fdd2f96 (HEAD -> master)
+Author: ShubhamG <shubhamgandhi300@gmail.com>
+Date:   Wed Jan 6 10:03:45 2021 +0530
+
+    File1 has been added
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ touch file2.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git add .
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ ls
+file1.txt  file2.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git commit -m "File2 has been added" 
+[master e64e600] File2 has been added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git log
+commit e64e60069f3a46b57af11efedf69493effd2095d (HEAD -> master)
+Author: ShubhamG <shubhamgandhi300@gmail.com>
+Date:   Wed Jan 6 10:04:51 2021 +0530
+
+    File2 has been added
+
+commit 56586c534371ef686005a7dc2c2bf3009fdd2f96
+Author: ShubhamG <shubhamgandhi300@gmail.com>
+Date:   Wed Jan 6 10:03:45 2021 +0530
+
+    File1 has been added
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git status
+On branch master
+nothing to commit, working tree clean
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch
+* master
+
