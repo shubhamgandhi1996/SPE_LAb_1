@@ -39,4 +39,73 @@ On branch master
 nothing to commit, working tree clean
 (base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch
 * master
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch "branch1"
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch
+  branch1
+* master
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git checkout branch1 
+M	file1.txt
+Switched to branch 'branch1'
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch
+* branch1
+  master
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ touch file3.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git add .
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git commit -m "File3 has been added" 
+[branch1 eb72376] File3 has been added
+ 2 files changed, 42 insertions(+)
+ create mode 100644 file3.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ ls
+file1.txt  file2.txt  file3.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git tree
+git: 'tree' is not a git command. See 'git --help'.
 
+The most similar command is
+	mktree
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ 
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ 
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch
+* branch1
+  master
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git checkout branch2
+error: pathspec 'branch2' did not match any file(s) known to git
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch "branch2"
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git checkout branch2
+Switched to branch 'branch2'
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ touch file4.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git add .
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git commit -m "File4 added"
+[branch2 1f3ab25] File4 added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file4.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch
+  branch1
+* branch2
+  master
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git checkout master
+Switched to branch 'master'
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git merge branch1
+Updating e64e600..eb72376
+Fast-forward
+ file1.txt | 42 ++++++++++++++++++++++++++++++++++++++++++
+ file3.txt |  0
+ 2 files changed, 42 insertions(+)
+ create mode 100644 file3.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git branch -D branch1
+Deleted branch branch1 (was eb72376).
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ ls
+file1.txt  file2.txt  file3.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git checkout branch2 
+Switched to branch 'branch2'
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ ls
+file1.txt  file2.txt  file3.txt  file4.txt
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ git checkout master
+Switched to branch 'master'
+(base) sg@Shubham:~/Desktop/SPE/Lab1$ 
+ORDER NUMBER  101170328
+
+DATE ORDERED  1/1/21
+
+ORDER STATUS   Ordered
+
+SHIPPED TO  Shubham Gandhi
